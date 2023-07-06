@@ -1,0 +1,15 @@
+Game:
+    - "You" and "Computer" sides (slightly toward center of screen)
+    - 3 buttons below both sides
+    - A div for "Paper beats Rock! You win this round".
+    - Green for wins and red for losses
+    - Box-shadow icons
+
+Scoreboard:
+    - "3-0"
+    - Create new div for "You Win! [Final score: 3-0]"
+
+Advanced:
+    - Wiggle animation on both sides after option selected (up-down x 3)
+    - Hide non-selected icons upon selecting choice
+    - "1" slides down to become "2" when win 1 point.
