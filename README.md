@@ -1,6 +1,5 @@
 # rock-paper-scissors
-Console implementation of the Rock Paper Scissors game.
-
+My implementation of the Rock Paper Scissors game!
 
 ### SVG credits: 
 https://www.svgrepo.com/svg/398225/rock
