@@ -61,8 +61,10 @@ async function game() {
 
     let playerScore = 0;
     let computerScore = 0;
+    
+    while (true) {
+        if (playerScore === 5 || computerScore == 5) break;
 
-    for (let i = 0; i < 3; i++) {
         let computerChoice = getComputerChoice();
         console.log(`Computer is ${computerChoice}`);
         let playerChoice = await getPlayerChoice();
@@ -82,14 +84,16 @@ async function game() {
         }
         console.log(playerScore, computerScore)
     }
-
-    let score = playerScore === computerScore
-        ? "It's a Tie!"
-        : playerScore > computerScore
-            ? `You Win ${playerScore}-${computerScore}!`
-            : `You Lose ${playerScore}-${computerScore}!`
-
+    
     const finalResult = document.querySelector(".final-result");
+
+    if (playerScore >= computerScore) {
+        score = `You Win ${playerScore}-${computerScore}!`;
+    } else {
+        score = `You Lose ${playerScore}-${computerScore}!`;
+        finalResult.style.color = "red";
+    }
+
     finalResult.textContent = score;
     finalResult.classList.add("clicked");
 }
