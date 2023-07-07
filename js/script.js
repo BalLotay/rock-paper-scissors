@@ -53,11 +53,9 @@ function capitalize(word) {
 }
 
 async function game() {
-    console.log("Starting...");
     let playerScoreOnScoreboard = document.querySelector(".player-score");
     let computerScoreOnScoreboard = document.querySelector(".computer-score");
     let info = document.querySelector(".info");
-    console.log(info);
 
     let playerScore = 0;
     let computerScore = 0;
@@ -66,13 +64,10 @@ async function game() {
         if (playerScore === 5 || computerScore == 5) break;
 
         let computerChoice = getComputerChoice();
-        console.log(`Computer is ${computerChoice}`);
         let playerChoice = await getPlayerChoice();
-        console.log(playerChoice);
 
         let result = getResult(playerChoice, computerChoice);
         info.innerHTML = result;
-        console.log(info.textContent);
         
         if (result.includes("Win")) {
             playerScore += 1;
@@ -82,7 +77,6 @@ async function game() {
             computerScore += 1;
             computerScoreOnScoreboard.textContent = computerScore;
         }
-        console.log(playerScore, computerScore)
     }
     
     const finalResult = document.querySelector(".final-result");
@@ -97,8 +91,6 @@ async function game() {
     finalResult.textContent = score;
     finalResult.classList.add("clicked");
     info.innerHTML += '<br style="text-align:center;">(Reload to play again)<br>';
-    console.log(info.textContent);
-    console.log(info.innerHTML);
 }
 
 game();
