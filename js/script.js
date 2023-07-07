@@ -80,7 +80,6 @@ async function game() {
             computerScore += 1;
             computerScoreOnScoreboard.textContent = computerScore;
         }
-
         console.log(playerScore, computerScore)
     }
 
@@ -90,16 +89,9 @@ async function game() {
             ? `You Win ${playerScore}-${computerScore}!`
             : `You Lose ${playerScore}-${computerScore}!`
 
-    console.log(score)
-
-    const finalResult = document.createElement("div");
-    finalResult.classList.add("new");
-    you.classList.add("new-other");
-    computer.classList.add("new-other");
-    gameDiv.insertBefore(finalResult, computer);
+    const finalResult = document.querySelector(".final-result");
     finalResult.textContent = score;
-    finalResult.style.cssText = "align-self: center; font-size: 40px; color: green"
-    console.log(finalResult.innerHTML);
+    finalResult.classList.add("clicked");
 }
 
 game();

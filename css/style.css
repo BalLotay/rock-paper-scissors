@@ -27,7 +27,7 @@ body {
 .you,
 .computer {
 	flex-basis: 245px;
-	transition: all 0.5s ease;
+	/* transition: all 0.5s ease; */
 }
 
 .score {
@@ -51,49 +51,40 @@ body {
 }
 
 button {
-	box-shadow: 0 0 0 5px teal;
+	box-shadow: 0 5px 0 5px teal;
 	border-radius: 20px;
-	/* background-color: rgb(173, 200, 200); */
 	transition: all 0.05s ease-in;
 	backdrop-filter: 10px;
 	border: none;
 }
 
+button:hover {
+	transform: scale(1.05);
+}
+
 button:active {
-	/* transform: scale(0.95); */
+	box-shadow: 0 0 0 5px teal;
 	transform: translateY(3px);
-}
-
-@keyframes append-animate-score {
-	from {
-		transform: scale(0.5);
-		opacity: 0.5;
-	}
-	to {
-		transform: scale(1);
-		opacity: 1;	
-	}
-}
-@keyframes append-animate-other {
-	from {
-		/* transform: scale(0.5);
-		opacity: 0; */
-	}
-	to {
-		transform: translateX(50px);
-		/* opacity: 1;	 */
-	}
-}
-
-/* animate new box */
-.new {
-	animation: append-animate-score 5s ease;
-}
-
-.new-other {
-	animation: append-animate-other 5s ease;
 }
 
 img {
 	color: red;
+}
+
+.final-result {
+	flex: 0 1 0px;
+	overflow: hidden;
+	transition: flex 2s ease, width 2s ease;
+	white-space: nowrap;
+	border: none;
+	height: min-content;
+	width: 0px; 
+}
+
+.clicked {
+	flex: 1 1 auto;
+	align-self: center; 
+	font-size: 40px; 
+	color: green;
+	max-width: 400px;
 }
