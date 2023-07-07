@@ -96,6 +96,9 @@ async function game() {
 
     finalResult.textContent = score;
     finalResult.classList.add("clicked");
+    info.innerHTML += '<br style="text-align:center;">(Reload to play again)<br>';
+    console.log(info.textContent);
+    console.log(info.innerHTML);
 }
 
 game();
