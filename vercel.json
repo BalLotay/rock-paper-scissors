@@ -1,5 +1,0 @@
-{
-  "redirects": [
-    {"source": "/(.*)", "destination": "https://balpreetsingh.me/rock-paper-scissors"}
-  ]
-}
