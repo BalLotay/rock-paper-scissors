@@ -1,5 +1,5 @@
 {
   "redirects": [
-    {"source": "/:path*", "destination": "https://balpreetsingh.me/rock-paper-scissors/:path*"}
+    {"source": "/(.*)", "destination": "https://balpreetsingh.me/rock-paper-scissors"}
   ]
 }
